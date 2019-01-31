@@ -13,13 +13,10 @@ node() {
  	 }
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
- bat "
-  PATH
-  setx PATH "%PATH%;C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
-  PATH
+ bat """ setx PATH "%PATH%;C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
   pip install virtualenv
   virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe 
-  "
+  """
 	}
 	
 	stage('install '){ 
