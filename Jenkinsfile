@@ -1,13 +1,9 @@
 node() {
-	try{
+	
  	stage('checkout'){
- 	checkout scm
- 	}
- 	
- 	stage('build env'){
- 	try{
+ 	checkout scm	
+ 	stage('build env'){	
  	bat "rmdir myproj"
-  	}
  	 catch(err){
   	print " no such directory"
  	 }
