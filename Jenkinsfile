@@ -27,7 +27,7 @@ node() {
 	pip install wxpython
 	pip install win-inet-pton
 	pip install opencv-python
-	pip install python-appium-client"
+	//pip install python-appium-client"
 	}
 	stage('build '){
 	try {
