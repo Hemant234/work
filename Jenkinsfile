@@ -11,8 +11,10 @@ node() {
  	 catch(err){
   	print " no such directory"
  	 }
-  bat '''
+ 
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
+ bat '''
+  PATH
   pip install virtualenv
   virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe 
   '''
