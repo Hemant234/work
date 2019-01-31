@@ -55,11 +55,11 @@ node() {
  	}
  	
  	catch(err){
- 		print " current Build is a failure"
- 		mail body:   'project build not successful',
-                     from: 'tanmaihemant09@gmail.com',
-                     subject: 'project build not successful',
-                     to: 'hemantbun09@gmail.com'
+ 	//	print " current Build is a failure"
+ 	//	mail body:   'project build not successful',
+          //           from: 'tanmaihemant09@gmail.com',
+             //        subject: 'project build not successful',
+              //       to: 'hemantbun09@gmail.com'
       throw err
  	}
  		
