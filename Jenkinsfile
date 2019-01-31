@@ -18,7 +18,7 @@ node() {
  bat '''cd C:/Python27/Scripts
  set https_proxy=http://165.225.104.32:80
  pip install virtualenv
- cd C:\Program Files (x86)\Jenkins\workspace\Hope1
+ cd C:/Program Files (x86)/Jenkins/workspace/Hope1
  bat "virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe"
    '''
   }
