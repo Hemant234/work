@@ -14,6 +14,7 @@ node() {
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
  def workspace = pwd()
+ print "$workspace"
  bat '''cd C:/Python27/Scripts
  set https_proxy=http://165.225.104.32:80
  pip install virtualenv
