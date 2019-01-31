@@ -11,18 +11,16 @@ node() {
  	 catch(err){
   	print " no such directory"
  	 }
-  bat '''
-  setx PATH %PATH%;C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts
-  pip install virtualenv"
-  virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe 
-  '''
+  bat 'setx PATH "%PATH%;C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts" '
+  bat " pip install virtualenv"
+  bat " virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe "
+  bat " cd Scripts"
+  bat "activate"
+  bat "cd .."
 	}
 	
 	stage('install '){ 
-	bat '''
-	cd Scripts
-  activate
-  cd ..
+	//bat "SET HTTPS_PROXY=http://165.225.104.32:80
 	pip install selenium
 	pip install pymodbus
 	pip install pymodbustcp
@@ -32,16 +30,10 @@ node() {
 	pip install win-inet-pton
 	pip install opencv-python
 	//pip install python-appium-client"
-	'''
 	}
 	stage('build '){
 	try {
-  	bat '''
-  	 cd Scripts
-  	activate
-  	cd ..
-  	IFE_performance.py
-  	'''
+  	bat " IFE_performance.py"
   }
   catch(err){
   	print " Script is not running"
@@ -49,12 +41,10 @@ node() {
   
 	}
 	stage('Git'){
-	bat '''
-	 git config --global http.proxy http://165.225.104.32:80"
-	 git add *"
-	 git commit -m * "	
-	 git push origin master
-	 '''
+	bat " git config --global http.proxy http://165.225.104.32:80"
+	bat " git add *"
+	bat " git commit -m * "	
+	bat " git push origin master "
 	}
 	stage('email '){
 		 mail body:   'project build successful',
