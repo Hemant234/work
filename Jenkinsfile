@@ -18,7 +18,7 @@ node() {
  bat '''cd C:/Python27/Scripts
  set https_proxy=http://165.225.104.32:80
  pip install virtualenv
- cd C:/Program Files (x86)/Jenkins/workspace/Hope1
+ cd C:/Program Files (x86)/Jenkins/workspace
  bat "virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe"
    '''
   }
@@ -74,14 +74,6 @@ node() {
 
  	}
  	
- 	catch(err){
- 	//	print " current Build is a failure"
- 	//	mail body:   'project build not successful',
-          //           from: 'tanmaihemant09@gmail.com',
-             //        subject: 'project build not successful',
-              //       to: 'hemantbun09@gmail.com'
-      throw err
- 	}
  		
  
 	}
