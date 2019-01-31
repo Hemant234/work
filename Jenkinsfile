@@ -14,6 +14,7 @@ node() {
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
  bat '''cd C:/Python27/Scripts
+ set https_proxy=http://165.225.104.32:80
  pip install virtualenv
   virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe
   '''
