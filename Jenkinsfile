@@ -3,10 +3,6 @@ node() {
  	stage('checkout'){
  	checkout scm	
  	stage('build env'){	
- 	bat "rmdir myproj"
- 	 catch(err){
-  	print " no such directory"
- 	 }
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
  def workspace = pwd()
