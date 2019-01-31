@@ -14,8 +14,9 @@ node() {
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
 withEnv(['C:/Python27/Scripts']){
- bat """ pip install virtualenv
+ bat '''pip install virtualenv
   virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe
+  '''
   }
 
 	}
