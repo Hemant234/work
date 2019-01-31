@@ -7,11 +7,12 @@ node() {
  	stage('build env'){
  	try{
  	bat "rmdir myproj"
-  }
-  catch(err){
+  	}
+ 	 catch(err){
   	print " no such directory"
-  }
- 	bat "" virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe ""
+ 	 }
+  
+  bat " virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe "
   bat " cd Scripts"
   bat "activate"
   bat "cd .."
