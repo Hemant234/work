@@ -11,7 +11,7 @@ node() {
  	 catch(err){
   	print " no such directory"
  	 }
-  bat 'setx /M PATH "%PATH%;C:\Users\SESA528099\PycharmProjects\hope2\venv\Scripts" '
+  bat 'setx /M PATH "%PATH%;C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts" '
   bat " pip install virtualenv"
   bat " virtualenv myproj --python= C:/Users/SESA528099/PycharmProjects/hope2/venv/Scripts/python.exe "
   bat " cd Scripts"
