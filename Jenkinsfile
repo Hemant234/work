@@ -17,18 +17,18 @@ virtualenv myproj
   }
   	
 	stage('install '){ 
+	//pip install selenium
+	//pip install pymodbus
+	//pip install pymodbustcp
+	//pip install pandas
+	//pip install styleframe
+	//pip install wxpython
+	//pip install win-inet-pton
+	//pip install opencv-python
+	//pip install python-appium-client"
 	bat '''
         call activate
-	pip install selenium
-	pip install pymodbus
-	pip install pymodbustcp
-	pip install pandas
-	pip install styleframe
-	pip install wxpython
-	pip install win-inet-pton
-	pip install opencv-python
-	//pip install python-appium-client"
-	IFE_performance.py
+	IFE_performance1.py
 	'''
 	}	
   
