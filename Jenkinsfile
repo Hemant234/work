@@ -18,7 +18,7 @@ virtualenv myproj
   	
 	stage('install '){ 
 	bat '''
-        activate
+        call activate
 	pip install selenium
 	pip install pymodbus
 	pip install pymodbustcp
