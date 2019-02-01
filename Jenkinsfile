@@ -34,12 +34,13 @@ virtualenv myproj
   
 	
 	stage('Git'){
-	bat '''
-	 git config --global http.proxy http://165.225.104.32:80"
-	 git add *"
-	 git commit -m * "	
-	 git push origin master
-	 '''
+	git url: "https://github.com/Hemant234/work.git"
+
+	 bat 'git config --global http.proxy http://165.225.104.32:80" '
+	 bat 'git merge develop'
+	 bat 'git commit -am "Merged develop branch to master'
+	 bat "git push origin master"
+	 
 	}
 	stage('email '){
 		 mail body:   'project build successful',
