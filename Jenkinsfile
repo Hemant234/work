@@ -28,7 +28,7 @@ virtualenv myproj
 	//pip install python-appium-client"
 	bat '''
         call activate
-	IFE_performance1.py
+	IFE_performance.py
 	'''
 	}	
   
