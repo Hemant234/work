@@ -1,4 +1,4 @@
-import sys
+
 
 
 # from tempLib import *
@@ -19,10 +19,12 @@ import sys
 
 from PyIMULibrary.PyIMU import *
 tcp255=MBTCP("10.179.247.153",255)
-
+import datetime
+logtime=  datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 tcp255.Establish_Connection()
 
 sys.stdout = open('log1', 'w')
+print logtime
 while True:
     # try:
         time.sleep(2)
@@ -32,6 +34,6 @@ while True:
         time.sleep(2)
         tcp255.Nova_BU_Get_Close_Inhibition_By_Wire_Enabling(1,0,0)
     # except:
-    #     break
+    	break
 
 tcp255.Disestablish_Connection()
