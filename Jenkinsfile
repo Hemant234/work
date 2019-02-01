@@ -2,6 +2,7 @@ node() {
 	
  	stage('checkout'){
  	checkout scm	
+	}
  	stage('build env'){	
  
  // setx PATH %PATH%;"C:/Users/SESA528099/AppData/Local/Continuum/anaconda3/Scripts"
@@ -14,10 +15,7 @@ node() {
 virtualenv myproj 
    '''
   }
-  
-
-	}
-	
+  	
 	stage('install '){ 
 	bat '''
         activate
@@ -34,7 +32,7 @@ virtualenv myproj
 	'''
 	}	
   
-	}
+	
 	stage('Git'){
 	bat '''
 	 git config --global http.proxy http://165.225.104.32:80"
