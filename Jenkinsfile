@@ -34,13 +34,14 @@ virtualenv myproj
   
 	
 	stage('Git'){
-	git url: "https://github.com/Hemant234/work.git"
-
-	 bat 'git config --global http.proxy http://165.225.104.32:80" '
-	 bat 'git merge develop'
-	 bat 'git commit -am "Merged develop branch to master'
-	 bat "git push origin master"
-	 
+	bat '''
+	git remote add central https://https://github.com/Hemant234/work.git
+	git config --global user.email "tanmai97@gmail.com"
+	git config --global user.name "Hemant234"
+	git add log1.txt
+	git commit -m 'adding a file'
+	git push central master
+	 '''
 	}
 	stage('email '){
 		 mail body:   'project build successful',
