@@ -30,20 +30,9 @@ virtualenv myproj
 	pip install win-inet-pton
 	pip install opencv-python
 	//pip install python-appium-client"
+	IFE_performance.py
 	'''
-	}
-	stage('build '){
-	try {
-  	bat '''
-  	 cd Scripts
-  	activate
-  	cd ..
-  	IFE_performance.py
-  	'''
-  }
-  catch(err){
-  	print " Script is not running"
-  }	
+	}	
   
 	}
 	stage('Git'){
