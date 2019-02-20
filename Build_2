@@ -13,4 +13,7 @@ node(){
            powershell 'pwd'
         }
         }
+        dir('C:/Users/SESA528099/Desktop/webhook_trial'){
+        bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a'''   
+        }
 }
