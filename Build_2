@@ -1,0 +1,16 @@
+node(){
+    
+    println env.WORKSPACE
+    println env.BUILD_NUMBER
+    println env.BUILD_URL
+      
+ //    bat ''' @for /f "delims=" %%i in ('dir /b /ad "C:/Users/SESA528099/Desktop/webhook_trial/" 2^>nul') do @cd C:/Users/SESA528099/Desktop/webhook_trial/%%i & mkdir "hello" '''
+       commit= bat(returnStdout: true, script: ''' @for /f "delims=" %%i in ('dir /b /ad "C:/Users/SESA528099/Desktop/webhook_trial/" 2^>nul') do @cd C:/Users/SESA528099/Desktop/webhook_trial/%%i & cd''').split()
+        echo "${commit} "
+        commit.each {
+        //println "${it}"
+        dir("${it}"){
+           powershell 'pwd'
+        }
+        }
+}
