@@ -10,10 +10,15 @@ node(){
         commit.each {
         //println "${it}"
         dir("${it}"){
-           powershell 'pwd'
+            try{
+         file=bat(returnStdout: true, script:'''dir /s /b *.txt*''').trim()
+        echo "${file} "
+            }
+            catch(err){
+                echo "no file"
+            }
         }
         }
         dir('C:/Users/SESA528099/Desktop/webhook_trial'){
         bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a'''   
         }
-}
