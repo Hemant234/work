@@ -1,11 +1,11 @@
-node(){
+node('ubuntu'){
     
     println env.WORKSPACE
     println env.BUILD_NUMBER
     println env.BUILD_URL
       
  //    bat ''' @for /f "delims=" %%i in ('dir /b /ad "C:/Users/SESA528099/Desktop/webhook_trial/" 2^>nul') do @cd C:/Users/SESA528099/Desktop/webhook_trial/%%i & mkdir "hello" '''
-       commit= bat(returnStdout: true, script: ''' @for /f "delims=" %%i in ('dir /b /ad "C:/Users/SESA528099/Desktop/webhook_trial/" 2^>nul') do @cd C:/Users/SESA528099/Desktop/webhook_trial/%%i & cd''').split()
+       commit= bat(returnStdout: true, script: ''' @for /f "delims=" %%i in ('dir /b /ad "C:/Users/SESA528096/Desktop/goog" 2^>nul') do @cd C:/Users/SESA528096/Desktop/goog/%%i & cd''').split()
         echo "${commit} "
         commit.each {
         //println "${it}"
@@ -19,6 +19,6 @@ node(){
             }
         }
         }
-        dir('C:/Users/SESA528099/Desktop/webhook_trial'){
+        dir('C:/Users/SESA528096/Desktop/goog '){
         bat ''' FOR /f "tokens=*" %%a in ('dir *@tmp /A:D /B') DO RMDIR /S /Q %%a'''   
         }
