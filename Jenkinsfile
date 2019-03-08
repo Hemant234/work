@@ -7,6 +7,10 @@ node() {
 		dir('C:/Jenkins'){
 			commit= bat(returnStdout: true, script: 'loopname.py').trim()
 			 echo "${commit} "
+			 commit.each {
+				 dir("${it}"){
+				 }
+			 }
 
 		}
 	}
