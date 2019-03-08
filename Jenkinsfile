@@ -9,7 +9,8 @@ node() {
 			 echo "${commit} "
 
 		}
-	}	
+	}
+}
   
 	
 	
