@@ -4,8 +4,9 @@ node() {
  	checkout scm	
 	}
  	stage('build env'){
-		dir('C:\Jenkins'){
-			bat'loopname.py'
+		dir('C:/Jenkins'){
+			commit= bat(returnStdout: true, script: 'loopname.py').trim()
+			 echo "${commit} "
 
 		}
 	}	
