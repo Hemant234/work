@@ -8,12 +8,14 @@ node() {
 			commit= bat(returnStdout: true, script: 'loopname.py').trim()
 			 echo "${commit} "
 			 commit.each {
-				 echo "hemant"
+				 dir("${it}"){
+				 }
 			 }
 
 		}
 	}
 }
+  
   
 	
 	
