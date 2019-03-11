@@ -5,7 +5,7 @@ node() {
 	}
  	stage('build env'){
 		dir('C:/Jenkins'){
-			commit= bat(returnStdout: true, script: 'loopname.py').trim()
+			commit= bat(returnStdout: true, script: 'loopname.py')
 			 echo "${commit} "
 			 commit.each {
 				 dir("${it}"){
