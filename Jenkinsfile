@@ -2,7 +2,7 @@ node() {
 	dir('C:/Users/SESA528099/Desktop/webhook trial'){
 copyArtifacts(
           projectName: 'prereq_rpms',
-          filter: '**/*..xlsx,
+          filter: '**/*.xlsx,
           fingerprintArtifacts: true,
           target: 'V1.0',
           flatten: true,
